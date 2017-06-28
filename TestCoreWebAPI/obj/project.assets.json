@@ -21176,10 +21176,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/TestCoreWebAPI.csproj",
+      "projectUniqueName": "/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/TestCoreWebAPI.csproj",
       "projectName": "TestCoreWebAPI",
-      "projectPath": "/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/TestCoreWebAPI.csproj",
-      "outputPath": "/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj",
+      "projectPath": "/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/TestCoreWebAPI.csproj",
+      "outputPath": "/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/obj",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
