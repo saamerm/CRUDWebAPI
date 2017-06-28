@@ -1,0 +1,10 @@
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/bin/Release/netcoreapp1.1/TestCoreWebAPI.deps.json
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/bin/Release/netcoreapp1.1/TestCoreWebAPI.runtimeconfig.json
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/bin/Release/netcoreapp1.1/TestCoreWebAPI.runtimeconfig.dev.json
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/bin/Release/netcoreapp1.1/TestCoreWebAPI.dll
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/bin/Release/netcoreapp1.1/TestCoreWebAPI.pdb
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj/Release/netcoreapp1.1/TestCoreWebAPI.csproj.CoreCompileInputs.cache
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj/Release/netcoreapp1.1/TestCoreWebAPI.AssemblyInfo.cs
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj/Release/netcoreapp1.1/TestCoreWebAPI.dll
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj/Release/netcoreapp1.1/TestCoreWebAPI.pdb
+/Users/saamermansoor/Projects/TestCoreWebAPI/TestCoreWebAPI/obj/Release/netcoreapp1.1/TestCoreWebAPI.csprojResolveAssemblyReference.cache
