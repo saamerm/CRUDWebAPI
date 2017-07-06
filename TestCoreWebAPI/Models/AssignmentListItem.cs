@@ -1,8 +1,9 @@
-﻿using System;
+﻿﻿using System;
 namespace TestCoreWebAPI.Models
 {
 	public class AssignmentListItem
 	{
+		public long ProjectCode { get; set; }
 		public long Id { get; set; }            //ProjectNo
 		public string Name { get; set; }        //ProjectDesc
 		public bool IsComplete { get; set; }    //Approved
