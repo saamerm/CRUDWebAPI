@@ -17,6 +17,6 @@ namespace TestCoreWebAPI.Models
 		public string PercentOfProject { get; set; }  //
 		public string LoginsAssociated { get; set; }  //
         public string ListOfAEs { get; set; }  //
-		public string Value { get; set; }
+		public string dollarValue { get; set; }
 	}
 }

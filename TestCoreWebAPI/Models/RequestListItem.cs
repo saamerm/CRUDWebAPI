@@ -8,7 +8,7 @@ namespace TestCoreWebAPI.Models
 		public bool IsComplete { get; set; }    //Approved
 		//public long ProjectNo { get; set; }  //
 		//public string ProjectName { get; set; }  //
-	    public bool LabLocation { get; set; }  //LabLocation
+	    public string LabLocation { get; set; }  //LabLocation
 	    //public string ProjectDesc { get; set; }  //
 	    public string BillTo { get; set; }  //
 	    public string ReportTo { get; set; }  //
@@ -16,7 +16,7 @@ namespace TestCoreWebAPI.Models
 	    public string JDECode { get; set; }  //
 	    public string PercentOfProject { get; set; }  //
 	    public string LoginsAssociated { get; set; }  //
-	    public string Value { get; set; }  //
+	    public string dollarValue { get; set; }  //
 	    public string RequestDate { get; set; }  //
 	    public string NewAEName { get; set; }  //
 	    public string PercOfPrjRequested { get; set; }  //

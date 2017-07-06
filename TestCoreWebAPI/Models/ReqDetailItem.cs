@@ -18,7 +18,7 @@ namespace TestCoreWebAPI.Models
 		public string NewAEName { get; set; }  //
 		public string PercOfPrjRequested { get; set; }  //
 		public string AEComments { get; set; }  //
-		public string Value { get; set; }  //
+		public string dollarValue { get; set; }  //
 		//public IList<LoginsAssociated> loginsAssociated { get; set; }
 		//public IList<ListOfAE> listOfAEs { get; set; }
 		//public class LoginsAssociated

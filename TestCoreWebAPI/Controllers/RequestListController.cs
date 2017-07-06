@@ -22,7 +22,20 @@ namespace TestCoreWebAPI.Controllers
 				//The constructor adds an item to the in-memory database if one doesn't exist.
 				_context.RequestListItems.Add(new RequestListItem
 				{
-					Name = "Item1"
+					Name = "Item1",
+					IsComplete=false,
+					LabLocation="and",
+					BillTo="and",
+					ReportTo="and",
+					AEName="and",
+					JDECode="2354",
+					PercentOfProject="0.5",
+					LoginsAssociated="12414",
+					dollarValue="3453456",
+					RequestDate="1499336576",
+					NewAEName="and",
+					PercOfPrjRequested="50",
+                    AEComments="Comments"
 				});
 				_context.SaveChanges();
 			}
@@ -79,6 +92,16 @@ namespace TestCoreWebAPI.Controllers
 				return NotFound();
 			}
 			RequestList.IsComplete = item.IsComplete;
+			//RequestList.projectName = item.projectName;
+            RequestList.LabLocation = item.LabLocation;
+			RequestList.BillTo = item.BillTo;
+			RequestList.ReportTo = item.ReportTo;
+			RequestList.AEName = item.AEName;
+			RequestList.JDECode = item.JDECode;
+			RequestList.PercentOfProject = item.PercentOfProject;
+			RequestList.LoginsAssociated = item.LoginsAssociated;
+			RequestList.NewAEName = item.NewAEName;
+			RequestList.dollarValue = item.dollarValue;
 			RequestList.Name = item.Name;
 			_context.RequestListItems.Update(RequestList);
 			_context.SaveChanges();
