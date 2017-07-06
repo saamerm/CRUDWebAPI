@@ -14,20 +14,21 @@ namespace TestCoreWebAPI.Models
 		//public string AEName { get; set; }  //
 		public string JDECode { get; set; }  //
 		public string PercentOfProject { get; set; }  //
-		public IList<LoginsAssociated> loginsAssociated { get; set; }
-		public IList<ListOfAE> listOfAEs { get; set; }		public string Value { get; set; }  //
 		public string RequestDate { get; set; }  //
 		public string NewAEName { get; set; }  //
 		public string PercOfPrjRequested { get; set; }  //
 		public string AEComments { get; set; }  //
-		public class LoginsAssociated
-		{
-			public int loginNumber { get; set; }
-		}
+		public string Value { get; set; }  //
+		//public IList<LoginsAssociated> loginsAssociated { get; set; }
+		//public IList<ListOfAE> listOfAEs { get; set; }
+		//public class LoginsAssociated
+		//{
+		//	public int loginNumber { get; set; }
+		//}
 
-		public class ListOfAE
-		{
-			public string aeName { get; set; }
-		}
+		//public class ListOfAE
+		//{
+		//	public string aeName { get; set; }
+		//}
 	}
 }
