@@ -3,10 +3,13 @@ namespace TestCoreWebAPI.Models
 {
 	public class AssignmentListItem
 	{
-		public string ProjectName { get; set; }  //
+		public long Id { get; set; }            //ProjectNo
+		public string Name { get; set; }        //ProjectDesc
+		public bool IsComplete { get; set; }    //Approved
+        public string ProjectName { get; set; }  //
 		public string LabLocation { get; set; }  //LabLocation
-		public long ProjectNo { get; set; }  //
-		public string ProjectDesc { get; set; }  //
+		//public long ProjectNo { get; set; }  //
+		//public string ProjectDesc { get; set; }  //
 		public string BillTo { get; set; }  //
 		public string ReportTo { get; set; }  //
 		public string AEName { get; set; }  //

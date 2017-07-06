@@ -22,7 +22,7 @@ namespace TestCoreWebAPI.Controllers
 				//The constructor adds an item to the in-memory database if one doesn't exist.
 				_context.RequestListItems.Add(new RequestListItem
 				{
-					ProjectName = "Item1"
+					Name = "Item1"
 				});
 				_context.SaveChanges();
 			}
@@ -39,7 +39,7 @@ namespace TestCoreWebAPI.Controllers
 			}
 			_context.RequestListItems.Add(item);
 			_context.SaveChanges();
-			return CreatedAtRoute("GetRequestList", new { id = item.ProjectNo }, item);
+			return CreatedAtRoute("GetRequestList", new { id = item.Id }, item);
 		}
 
 		//These methods implement the two GET methods:
@@ -57,7 +57,7 @@ namespace TestCoreWebAPI.Controllers
 			//The GetById method returns the more general IActionResult type, which represents a wide range of return types.GetById has two different return types:
 			//If no item matches the requested ID, the method returns a 404 error.This is done by returning NotFound.
 			//Otherwise, the method returns 200 with a JSON response body.This is done by returning an ObjectResult
-			var item = _context.RequestListItems.FirstOrDefault(t => t.ProjectNo == id);
+			var item = _context.RequestListItems.FirstOrDefault(t => t.Id == id);
 			if (item == null)
 			{
 				return NotFound();
@@ -69,17 +69,17 @@ namespace TestCoreWebAPI.Controllers
 		[HttpPut("{id}")]
 		public IActionResult Update(long id, [FromBody] RequestListItem item)
 		{
-			if (item == null || item.ProjectNo != id)
+			if (item == null || item.Id != id)
 			{
 				return BadRequest();
 			}
-			var RequestList = _context.RequestListItems.FirstOrDefault((t => t.ProjectNo == id));
+			var RequestList = _context.RequestListItems.FirstOrDefault((t => t.Id == id));
 			if (RequestList == null)
 			{
 				return NotFound();
 			}
-			RequestList.LabLocation = item.LabLocation;
-			RequestList.ProjectName = item.ProjectName;
+			RequestList.IsComplete = item.IsComplete;
+			RequestList.Name = item.Name;
 			_context.RequestListItems.Update(RequestList);
 			_context.SaveChanges();
 			return new NoContentResult();
@@ -89,7 +89,7 @@ namespace TestCoreWebAPI.Controllers
 		[HttpDelete("{id}")]
 		public IActionResult Delete(long id)
 		{
-			var RequestList = _context.RequestListItems.First(t => t.ProjectNo == id);
+			var RequestList = _context.RequestListItems.First(t => t.Id == id);
 			if (RequestList == null)
 			{
 				return NotFound();

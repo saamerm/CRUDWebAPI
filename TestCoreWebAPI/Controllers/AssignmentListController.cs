@@ -20,7 +20,7 @@ namespace TestCoreWebAPI.Controllers
 			if (_context.AssignmentListItems.Count() == 0)
 			{
 				//The constructor adds an item to the in-memory database if one doesn't exist.
-				_context.AssignmentListItems.Add(new AssignmentListItem { ProjectName = "Item1" });
+				_context.AssignmentListItems.Add(new AssignmentListItem { Name = "Item1" });
 				_context.SaveChanges();
 			}
 		}
@@ -36,7 +36,7 @@ namespace TestCoreWebAPI.Controllers
 			}
 			_context.AssignmentListItems.Add(item);
 			_context.SaveChanges();
-			return CreatedAtRoute("GetAssignmentList", new { id = item.ProjectNo }, item);
+			return CreatedAtRoute("GetAssignmentList", new { id = item.Id }, item);
 		}
 
 		//These methods implement the two GET methods:
@@ -54,7 +54,7 @@ namespace TestCoreWebAPI.Controllers
 			//The GetById method returns the more general IActionResult type, which represents a wide range of return types.GetById has two different return types:
 			//If no item matches the requested ID, the method returns a 404 error.This is done by returning NotFound.
 			//Otherwise, the method returns 200 with a JSON response body.This is done by returning an ObjectResult
-			var item = _context.AssignmentListItems.FirstOrDefault(t => t.ProjectNo == id);
+			var item = _context.AssignmentListItems.FirstOrDefault(t => t.Id == id);
 			if (item == null)
 			{
 				return NotFound();
@@ -66,17 +66,17 @@ namespace TestCoreWebAPI.Controllers
 		[HttpPut("{id}")]
 		public IActionResult Update(long id, [FromBody] AssignmentListItem item)
 		{
-			if (item == null || item.ProjectNo != id)
+			if (item == null || item.Id != id)
 			{
 				return BadRequest();
 			}
-			var AssignmentList = _context.AssignmentListItems.FirstOrDefault((t => t.ProjectNo == id));
+			var AssignmentList = _context.AssignmentListItems.FirstOrDefault((t => t.Id == id));
 			if (AssignmentList == null)
 			{
 				return NotFound();
 			}
-			AssignmentList.LabLocation = item.LabLocation;
-			AssignmentList.ProjectName = item.ProjectName;
+            AssignmentList.IsComplete = item.IsComplete;
+			AssignmentList.Name = item.Name;
 			_context.AssignmentListItems.Update(AssignmentList);
 			_context.SaveChanges();
 			return new NoContentResult();
@@ -86,7 +86,7 @@ namespace TestCoreWebAPI.Controllers
 		[HttpDelete("{id}")]
 		public IActionResult Delete(long id)
 		{
-			var AssignmentList = _context.AssignmentListItems.First(t => t.ProjectNo == id);
+            var AssignmentList = _context.AssignmentListItems.First(t => t.Id == id);
 			if (AssignmentList == null)
 			{
 				return NotFound();
