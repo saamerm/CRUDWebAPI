@@ -11,6 +11,5 @@ namespace TestCoreWebAPI.Models
 		}
 
 		public DbSet<ReqDetailItem> ReqDetailItems { get; set; }
-
 	}
 }

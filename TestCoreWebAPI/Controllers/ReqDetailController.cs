@@ -1,44 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using Microsoft.AspNetCore.Mvc;
-//using TestCoreWebAPI.Models;
-//using System.Linq;
-//namespace TestCoreWebAPI.Controllers
-//{
-//	[Route("api/[controller]")]
-//	public class ReqDetailController : Controller
-//	{
-//		private readonly ReqDetailContext _context;
-
-//		public ReqDetailController(ReqDetailContext context)
-//		{
-//			_context = context;
-
-//			if (_context.ReqDetailItems.Count() == 0)
-//			{
-//				_context.ReqDetailItems.Add(new ReqDetailItem { Name = "Item1" });
-//				_context.SaveChanges();
-//			}
-//		}
-//		[HttpGet]
-//		public IEnumerable<ReqDetailItem> GetAll()
-//		{
-//			return _context.ReqDetailItems.ToList();
-//		}
-
-//		[HttpGet("{id}", Name = "GetReqDetail")]
-//		public IActionResult GetById(long id)
-//		{
-//			var item = _context.ReqDetailItems.FirstOrDefault(t => t.Id == id);
-//			if (item == null)
-//			{
-//				return NotFound();
-//			}
-//			return new ObjectResult(item);
-//		}
-//	}
-//}
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -60,7 +20,24 @@ namespace TestCoreWebAPI.Controllers
 			if (_context.ReqDetailItems.Count() == 0)
 			{
 				//The constructor adds an item to the in-memory database if one doesn't exist.
-				_context.ReqDetailItems.Add(new ReqDetailItem { Name = "Item1" });
+				_context.ReqDetailItems.Add(new ReqDetailItem 
+                { 
+					ProjectCode = 14001685,
+					Name = "Honeywell Moundsville OM&M - 30924",
+					IsComplete = false,
+					LabLocation = "Knoxville",
+					BillTo = "Honeywell",
+					ReportTo = "Honeywell International Inc",
+					AEName = "NAD - East",
+					JDECode = "88250",
+					PercentOfProject = "100",
+					LoginsAssociated = "2",
+					dollarValue = "615",
+					RequestDate = "1499336576",
+					NewAEName = "Azad, Maryam",
+					PercOfPrjRequested = "100",
+					AEComments = "This was worked on by me"
+                });
 				_context.SaveChanges();
 			}
 		}
@@ -117,6 +94,19 @@ namespace TestCoreWebAPI.Controllers
 			}
 			ReqDetail.IsComplete = item.IsComplete;
 			ReqDetail.Name = item.Name;
+			ReqDetail.LabLocation = item.LabLocation;
+			ReqDetail.BillTo = item.BillTo;
+			ReqDetail.ReportTo = item.ReportTo;
+			ReqDetail.AEName = item.AEName;
+			ReqDetail.JDECode = item.JDECode;
+			ReqDetail.PercentOfProject = item.PercentOfProject;
+			ReqDetail.LoginsAssociated = item.LoginsAssociated;
+			ReqDetail.NewAEName = item.NewAEName;
+			ReqDetail.dollarValue = item.dollarValue;
+            ReqDetail.ProjectCode = ReqDetail.ProjectCode;
+            ReqDetail.RequestDate = ReqDetail.RequestDate;
+            ReqDetail.PercOfPrjRequested = ReqDetail.PercOfPrjRequested;
+            ReqDetail.AEComments = ReqDetail.AEComments;
 			_context.ReqDetailItems.Update(ReqDetail);
 			_context.SaveChanges();
 			return new NoContentResult();

@@ -58,6 +58,7 @@ namespace TestCoreWebAPI
 			services.AddDbContext<RequestListContext>(opt => opt.UseInMemoryDatabase());
             services.AddDbContext<ReqDetailContext>(opt=>opt.UseInMemoryDatabase());
 			services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase());
+            services.AddDbContext<RequestDetailsContext>(opt=>opt.UseInMemoryDatabase());
 			services.AddDbContext<AssignmentListContext>(opt => opt.UseInMemoryDatabase());
 			services.AddMvc();
 		}

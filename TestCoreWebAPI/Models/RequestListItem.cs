@@ -3,9 +3,9 @@ namespace TestCoreWebAPI.Models
 {
 	public class RequestListItem
 	{
-		public long ProjectCode { get; set; }
         public long Id { get; set; }            //ProjectNo
-		public string Name { get; set; }        //ProjectDesc
+		public long ProjectCode { get; set; }
+        public string Name { get; set; }        //ProjectDesc
 		public bool IsComplete { get; set; }    //Approved
 		//public long ProjectNo { get; set; }  //
 		//public string ProjectName { get; set; }  //

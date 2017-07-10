@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+
 namespace TestCoreWebAPI.Models
 {
 	public class RequestListContext : DbContext
@@ -8,10 +9,7 @@ namespace TestCoreWebAPI.Models
 			: base(options)
 		{
 		}
-		public DbSet<RequestListItem> RequestListItems
-		{
-			get;
-			set;
-		}
+
+		public DbSet<RequestListItem> RequestListItems{	get;set;}
 	}
 }
