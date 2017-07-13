@@ -18,6 +18,7 @@ namespace TestCoreWebAPI.Models
 		public string NewAEName { get; set; }  //
 		public string PercOfPrjRequested { get; set; }  //
 		public string AEComments { get; set; }  //
-		public string dollarValue { get; set; }  //
+		public string DollarValue { get; set; }  //
+		public int Status { get; set; }  //
 	}
 }

@@ -1,36 +1,23 @@
 ﻿<Properties StartupConfiguration="{5CFAADB1-D5CC-409A-B609-1E622F82A0A8}|Default">
   <MonoDevelop.Ide.ItemProperties.TestCoreWebAPI PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestCoreWebAPI/Controllers/RequestDetailsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestCoreWebAPI/Controllers/RequestListController.cs">
     <Files>
-      <File FileName="TestCoreWebAPI/Models/RequestDetailsItem.cs" Line="12" Column="1" />
-      <File FileName="TestCoreWebAPI/Models/RequestDetailsContext.cs" Line="13" Column="1" />
-      <File FileName="TestCoreWebAPI/Startup.cs" Line="48" Column="29" />
-      <File FileName="TestCoreWebAPI/Controllers/RequestDetailsController.cs" Line="41" Column="1" />
-      <File FileName="TestCoreWebAPI/Controllers/ReqDetailController.cs" Line="109" Column="57" />
-      <File FileName="TestCoreWebAPI/Models/ReqDetailItem.cs" Line="8" Column="1" />
-      <File FileName="TestCoreWebAPI/Models/RequestListContext.cs" Line="16" Column="1" />
-      <File FileName="TestCoreWebAPI/Models/RequestListItem.cs" Line="8" Column="9" />
-      <File FileName="TestCoreWebAPI/Models/ReqDetailContext.cs" Line="13" Column="59" />
-      <File FileName="TestCoreWebAPI/Controllers/RequestListController.cs" Line="82" Column="9" />
+      <File FileName="TestCoreWebAPI/Controllers/AssignmentDetailsController.cs" Line="70" Column="3" NotebookId="1" />
+      <File FileName="TestCoreWebAPI/Models/AssignmentListItem.cs" Line="10" Column="34" NotebookId="1" />
+      <File FileName="TestCoreWebAPI/Controllers/RequestListController.cs" Line="25" Column="21" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="1040" Y="25" Width="640" Height="793">
+        <Files>
+          <File FileName="TestCoreWebAPI/Models/AssignmentDetailsItem.cs" Line="24" Column="2" />
+          <File FileName="TestCoreWebAPI/Controllers/AssignmentListController.cs" Line="96" Column="16" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestListController.cs" relfile="TestCoreWebAPI/Controllers/RequestListController.cs" line="127" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestListController.cs" relfile="TestCoreWebAPI/Controllers/RequestListController.cs" line="130" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestListController.cs" relfile="TestCoreWebAPI/Controllers/RequestListController.cs" line="133" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/ReqDetailController.cs" relfile="TestCoreWebAPI/Controllers/ReqDetailController.cs" line="84" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/ReqDetailController.cs" relfile="TestCoreWebAPI/Controllers/ReqDetailController.cs" line="63" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/ReqDetailController.cs" relfile="TestCoreWebAPI/Controllers/ReqDetailController.cs" line="47" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/ReqDetailController.cs" relfile="TestCoreWebAPI/Controllers/ReqDetailController.cs" line="14" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="10" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="40" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="45" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="56" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="70" column="1" />
-      <Breakpoint file="/Users/saamermansoor/Documents/GitHub/CRUDWebAPI/TestCoreWebAPI/Controllers/RequestDetailsController.cs" relfile="TestCoreWebAPI/Controllers/RequestDetailsController.cs" line="103" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

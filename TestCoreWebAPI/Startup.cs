@@ -54,9 +54,8 @@ namespace TestCoreWebAPI
 		public void ConfigureServices(IServiceCollection services)
 		{
 			//Specifies an in-memory database is injected into the service container.
-			services.AddDbContext<AssignmentDetailContext>(opt => opt.UseInMemoryDatabase());
+			services.AddDbContext<AssignmentDetailsContext>(opt => opt.UseInMemoryDatabase());
 			services.AddDbContext<RequestListContext>(opt => opt.UseInMemoryDatabase());
-            services.AddDbContext<ReqDetailContext>(opt=>opt.UseInMemoryDatabase());
 			services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase());
             services.AddDbContext<RequestDetailsContext>(opt=>opt.UseInMemoryDatabase());
 			services.AddDbContext<AssignmentListContext>(opt => opt.UseInMemoryDatabase());

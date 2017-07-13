@@ -32,11 +32,12 @@ namespace TestCoreWebAPI.Controllers
                     JDECode="88250",
                     PercentOfProject="100",
                     LoginsAssociated="2",
-                    dollarValue="615",
+                    DollarValue="615",
                     RequestDate="1499336576",
                     NewAEName="Azad, Maryam",
                     PercOfPrjRequested="100",
-                    AEComments="This was worked on by me"
+                    AEComments="This was worked on by me",
+                    Status=3
                 });
                 _context.SaveChanges();
             }
@@ -93,7 +94,7 @@ namespace TestCoreWebAPI.Controllers
                 return NotFound();
             }
             RequestList.IsComplete = item.IsComplete;
-            //RequestList.projectName = item.projectName;
+            RequestList.ProjectCode = item.ProjectCode;
             RequestList.LabLocation = item.LabLocation;
             RequestList.BillTo = item.BillTo;
             RequestList.ReportTo = item.ReportTo;
@@ -102,8 +103,12 @@ namespace TestCoreWebAPI.Controllers
             RequestList.PercentOfProject = item.PercentOfProject;
             RequestList.LoginsAssociated = item.LoginsAssociated;
             RequestList.NewAEName = item.NewAEName;
-            RequestList.dollarValue = item.dollarValue;
+            RequestList.DollarValue = item.DollarValue;
             RequestList.Name = item.Name;
+            RequestList.Status = item.Status;
+            RequestList.RequestDate = item.RequestDate;
+            RequestList.PercOfPrjRequested = item.PercOfPrjRequested;
+            RequestList.AEComments = item.AEComments;
             _context.RequestListItems.Update(RequestList);
             _context.SaveChanges();
             return new NoContentResult();

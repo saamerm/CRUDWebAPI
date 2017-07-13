@@ -26,11 +26,12 @@ namespace TestCoreWebAPI.Controllers
 					JDECode = "88250",
 					PercentOfProject = "100",
 					LoginsAssociated = "2",
-					dollarValue = "615",
+					DollarValue = "615",
 					RequestDate = "1499336576",
 					NewAEName = "Azad, Maryam",
 					PercOfPrjRequested = "100",
-					AEComments = "This was worked on by me"
+					AEComments = "This was worked on by me",
+                    Status=3
                 });
                 _context.SaveChanges();
             }
@@ -88,11 +89,12 @@ namespace TestCoreWebAPI.Controllers
 			RequestDetails.PercentOfProject = item.PercentOfProject;
 			RequestDetails.LoginsAssociated = item.LoginsAssociated;
 			RequestDetails.NewAEName = item.NewAEName;
-			RequestDetails.dollarValue = item.dollarValue;
+			RequestDetails.DollarValue = item.DollarValue;
 			RequestDetails.ProjectCode = item.ProjectCode;
 			RequestDetails.RequestDate = item.RequestDate;
 			RequestDetails.PercOfPrjRequested = item.PercOfPrjRequested;
 			RequestDetails.AEComments = item.AEComments;
+            RequestDetails.Status = item.Status;
 			_context.RequestDetailsItems.Update(RequestDetails);
 			_context.SaveChanges();
 			return new NoContentResult();

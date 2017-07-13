@@ -17,11 +17,12 @@ namespace TestCoreWebAPI.Models
 	    public string JDECode { get; set; }  //
 	    public string PercentOfProject { get; set; }  //
 	    public string LoginsAssociated { get; set; }  //
-	    public string dollarValue { get; set; }  //
+	    public string DollarValue { get; set; }  //
 	    public string RequestDate { get; set; }  //
 	    public string NewAEName { get; set; }  //
 	    public string PercOfPrjRequested { get; set; }  //
-	    public string AEComments { get; set; }  //
+		public string AEComments { get; set; }  //
+		public int Status { get; set; }  //
 
 	}
 }

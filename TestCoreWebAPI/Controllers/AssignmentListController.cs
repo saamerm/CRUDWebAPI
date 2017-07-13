@@ -20,7 +20,22 @@ namespace TestCoreWebAPI.Controllers
 			if (_context.AssignmentListItems.Count() == 0)
 			{
 				//The constructor adds an item to the in-memory database if one doesn't exist.
-				_context.AssignmentListItems.Add(new AssignmentListItem { Name = "Item1" });
+				_context.AssignmentListItems.Add(new AssignmentListItem 
+                {
+					ProjectCode = 14001685,
+					Name = "Honeywell Moundsville OM&M - 30924",
+                    ProjectDesc="Description goes here",
+					IsComplete = false,
+					LabLocation = "Knoxville",
+					BillTo = "Honeywell",
+					ReportTo = "Honeywell International Inc",
+					AEName = "NAD - East",
+					JDECode = "88250",
+					PercentOfProject = "100",
+					LoginsAssociated = "2",
+					DollarValue = "615",
+					Status = 3
+                });
 				_context.SaveChanges();
 			}
 		}
@@ -76,9 +91,21 @@ namespace TestCoreWebAPI.Controllers
 				return NotFound();
 			}
             AssignmentList.IsComplete = item.IsComplete;
-			AssignmentList.Name = item.Name;
-			_context.AssignmentListItems.Update(AssignmentList);
-			_context.SaveChanges();
+            AssignmentList.ProjectCode = item.ProjectCode;
+            AssignmentList.Name = item.Name;
+            AssignmentList.ProjectDesc = item.ProjectDesc;
+            AssignmentList.IsComplete = item.IsComplete;
+            AssignmentList.LabLocation = item.LabLocation;
+            AssignmentList.BillTo = item.BillTo;
+            AssignmentList.ReportTo = item.ReportTo;
+            AssignmentList.AEName = item.AEName;
+            AssignmentList.JDECode = item.JDECode;
+            AssignmentList.PercentOfProject = item.PercentOfProject;
+            AssignmentList.LoginsAssociated = item.LoginsAssociated;
+            AssignmentList.DollarValue = item.DollarValue;
+            AssignmentList.Status = item.Status;
+            _context.AssignmentListItems.Update(AssignmentList);
+            _context.SaveChanges();
 			return new NoContentResult();
 		}
 
